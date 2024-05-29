@@ -60,7 +60,7 @@ python manage.py runserver
 
 Deberías ver un mensaje indicando que el servidor está corriendo y puedes acceder a tu nuevo proyecto en `http://127.0.0.1:8000/`.
 
-![django-en-ejecucion](documentacion/pythonRunning.png)
+![django-en-ejecucion](documentacion/img/pythonRunning.png)
 
 **6. Crear una Aplicación dentro del Proyecto**
 
