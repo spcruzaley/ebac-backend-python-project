@@ -103,6 +103,11 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+## Documentación adicional:
+
+- [Crear un modelo](documentacion/CREAR_MODELOS.MD)
+- [Implementar operaciones CRUD sobre el modelo creado](documentacion/IMPLEMENTAR_CRUD.MD)
+
 **Notas**
 
 - Asegúrate de tener todos los requisitos mínimos instalados antes de comenzar.

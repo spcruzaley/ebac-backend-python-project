@@ -75,3 +75,6 @@ deactivate
 ## Notas Adicionales
 - **Mantén tu entorno virtual activado mientras trabajas en el proyecto:** Esto asegura que todas las dependencias se instalen y utilicen desde el entorno virtual, evitando conflictos con otras versiones de paquetes en tu sistema.
 - **Reactivación del entorno virtual:** Si cierras tu terminal o deseas continuar trabajando en tu proyecto en otra sesión, simplemente navega a la carpeta del entorno virtual y actívalo nuevamente usando los comandos de activación.
+
+---
+[Regresar al readme principal](../README.MD)

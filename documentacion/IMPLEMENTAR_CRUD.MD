@@ -87,3 +87,6 @@ Los endpoints disponibles deberían ser:
 ![Crear direccion](img/eliminarPorIdPostman.png)
 
 Con estos pasos, tendrás un conjunto de endpoints CRUD completamente funcional para manejar la información de tu módulo, en este caso la tabla de direcciones.
+
+---
+[Regresar al readme principal](../README.MD)
