@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from rest_framework import viewsets
-from .models import Direccion, User, Category
-from .serializers import DireccionSerializer, UserSerializer, CategorySerializer
+from .models import Direccion, User, Category, Product
+from .serializers import DireccionSerializer, UserSerializer, CategorySerializer, ProductSerializer
 
 def vista_hola_mundo(request):
     data = {
@@ -20,3 +20,7 @@ class UserViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
