@@ -6,3 +6,12 @@ class Direccion(models.Model):
 
     def __str__(self):
         return self.nombre
+
+class User(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=255)
+    shippingAddress = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
