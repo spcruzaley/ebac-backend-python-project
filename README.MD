@@ -1,4 +1,4 @@
-# Generar un Proyecto Django
+# Proyecto Django
 
 ## Requerimientos Mínimos
 - **Python** 3.8 o superior
@@ -12,10 +12,20 @@
 - **Virtualenv**: Se puede instalar usando pip
 - **Django**: Se puede instalar usando pip
 
-## Pasos para Generar el Proyecto
+## Pasos para Ejecutar el Proyecto
 **1. Instalar Python**
 
 Asegúrate de tener Python instalado. Puedes descargarlo e instalarlo desde [python.org](https://www.python.org/downloads/).
+
+**2. Clonar este repositorio**
+
+```bash
+$ git clone https://github.com/spcruzaley/ebac-backend-python-project.git
+```
+Entra al directorio descargado
+```bash
+$ cd ebac-backend-python-project
+```
 
 **2. Crear un Entorno Virtual**
 
@@ -35,76 +45,65 @@ myenv\Scripts\activate
 ```
 Revisa [esta información](documentacion/ENTORNO_VIRTUAL.MD) adicional sobre entornor virutales.
 
-**3. Instalar Django**
+**3. Instalar Django y demás dependencias**
 
 Con el entorno virtual activado, instala Django utilizando pip:
 ```shell
 pip install django
+pip install djangorestframework
 ```
 
-**4. Crear el Proyecto Django**
+**4. Ejecutar el proyecto**
 
-Una vez que Django esté instalado, puedes crear un nuevo proyecto utilizando el comando `django-admin`:
-```shell
-django-admin startproject myproject
-```
-Esto creará un nuevo directorio llamado myproject que contendrá la estructura básica del proyecto Django.
-
-**5. Ejecutar el Servidor de Desarrollo**
-
-Navega al directorio del proyecto y ejecuta el servidor de desarrollo para asegurarte de que todo esté configurado correctamente:
-```shell
-cd myproject
-python manage.py runserver
+Ahora el proyecto ya tiene todo lo necesario para ser ejecutado correctamente, por lo que solo tendrás que iniciarlo con el siguiente comando
+```bash
+$ python ejemploEcommerce/manage.py runserver
 ```
 
-Deberías ver un mensaje indicando que el servidor está corriendo y puedes acceder a tu nuevo proyecto en `http://127.0.0.1:8000/`.
-
-![django-en-ejecucion](documentacion/img/pythonRunning.png)
-
-**6. Crear una Aplicación dentro del Proyecto**
-
-Dentro del proyecto, puedes crear aplicaciones individuales que gestionen diferentes funcionalidades. Para crear una nueva aplicación, usa el comando:
-```shell
-python manage.py startapp myapp
+Una vez terminado de ejecutar el proyecto, detenerlo con las teclas `Ctrl + C` y detener el ambiente virtual con el siguiente comando
+```bash
+deactivate
 ```
 
-**7. Migrar la Base de Datos**
+## Adicionales
 
-Django utiliza migraciones para aplicar cambios en la base de datos. Ejecuta las siguientes órdenes para crear las tablas necesarias en tu base de datos:
-```shell
-python manage.py makemigrations
-python manage.py migrate
-```
+Cabe mencionar que este repositorio ya cuenta con un proyecto de ejemplo el cual considera las siguientes entidades:
 
-## Resumen de Comandos
+|User||
+|--|--|
+|id| Identificador único del usuario.|
+|name| Nombre del usuario.|
+|email| Correo electrónico para acceso.|
+|password| Contraseña del usuario.|
+|shippingAddress| Dirección principal de envío (opcional hasta que se realice una compra).|
 
-```shell
-# Crear y activar un entorno virtual
-python3 -m venv myenv
-source myenv/bin/activate       # Unix/Mac
-myenv\Scripts\activate          # Windows
+|Category||
+|--|--|
+|id|Identificador único de la categoría.|
+|name|Nombre de la categoría.|
+|description|Descripción de la categoría.|
 
-# Instalar Django
-pip install django
+|Product||
+|--|--|
+|id|Identificador único del producto.|
+|name|Nombre del producto.|
+|description|Descripción breve del producto.|
+|price|Precio del producto.|
+|stock|Cantidad disponible del producto.|
+|imageUrl|URL de la imagen del producto.|
+|categoryId|Identificador de la categoría a la que pertenece el producto.|
 
-# Crear un nuevo proyecto Django
-django-admin startproject myproject
-
-# Navegar al directorio del proyecto y ejecutar el servidor
-cd myproject
-python manage.py runserver
-
-# Crear una nueva aplicación
-python manage.py startapp myapp
-
-# Migrar la base de datos
-python manage.py makemigrations
-python manage.py migrate
-```
+|Purchase||
+|--|--|
+|id|Identificador único de la compra.|
+|userId|Identificador del usuario que realiza la compra.|
+|products|Lista de id´s de los productos comprados.|
+|total|Total pagado.|
+|shippingAddress|Dirección de envío utilizada para esta compra.|
 
 ## Documentación adicional:
 
+- [Generación de un proyecto adicional](documentacion/GENERAR_PROYECTO.MD)
 - [Crear un modelo](documentacion/CREAR_MODELOS.MD)
 - [Implementar operaciones CRUD sobre el modelo creado](documentacion/IMPLEMENTAR_CRUD.MD)
 
