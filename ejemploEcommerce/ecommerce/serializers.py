@@ -1,6 +1,6 @@
 # myapp/serializers.py
 from rest_framework import serializers
-from .models import Direccion, User, Category, Product
+from .models import Direccion, User, Category, Product, Purchase
 
 class DireccionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -20,4 +20,11 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
+        fields = '__all__'
+
+class PurchaseSerializer(serializers.ModelSerializer):
+    products = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), many=True)
+
+    class Meta:
+        model = Purchase
         fields = '__all__'
