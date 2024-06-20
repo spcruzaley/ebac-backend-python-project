@@ -106,6 +106,9 @@ Cabe mencionar que este repositorio ya cuenta con un proyecto de ejemplo el cual
 - [Generación de un proyecto adicional](documentacion/GENERAR_PROYECTO.MD)
 - [Crear un modelo](documentacion/CREAR_MODELOS.MD)
 - [Implementar operaciones CRUD sobre el modelo creado](documentacion/IMPLEMENTAR_CRUD.MD)
+- [Archivo json con ejemplos de ejecución con Postman](documentacion/PythonProject.postman_collection.json)
+    + Descarga postman desde [la página oficial](https://www.postman.com/) para que puedas hacer pruebas en tu ambiente local.
+    + Para importar el archivo a Postman puedes seguir este [tutorial](https://www.youtube.com/watch?v=poYqCMhrgSc)
 
 **Notas**
 
